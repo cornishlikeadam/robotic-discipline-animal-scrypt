@@ -1,0 +1,16 @@
+{
+  "company_name": "Animal Scrypt (Robotic Discipline)",
+  "practice_name": "Disciple",
+  "related_mark": "Madken",
+  "colors": {
+    "paper": "#EFE6D4",
+    "ink": "#141413",
+    "lime": "#D8FF3E",
+    "hot_blush": "unset"
+  },
+  "links": {
+    "pitch_deck": "/seed/11-deck-investor.md",
+    "demo_view": "/skeleton/zine_demo_view.html",
+    "custom_domain": "https://dataroom.animalscrypt.local"
+  }
+}

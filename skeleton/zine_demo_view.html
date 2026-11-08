@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>ANIMAL SCRYPT // MADKEN STAGE-1 ZINE TERMINAL (DEMO)</title>
+<style>
+  :root {
+    --paper: #f4f1ea;
+    --ink: #101419;
+    --cobalt-glass: rgba(14, 98, 209, 0.14);
+    --cobalt-border: #0e62d1;
+    --optic-green: #16c784;
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Courier New", Courier, monospace;
+    margin: 2rem auto;
+    max-width: 920px;
+    padding: 0 1.5rem;
+    line-height: 1.5;
+  }
+  header {
+    border-bottom: 3px solid var(--ink);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .zine-tag {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 0.2rem 0.6rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .panel {
+    background: var(--cobalt-glass);
+    border: 2px solid var(--cobalt-border);
+    padding: 1rem 1.25rem;
+    box-shadow: 4px 4px 0px var(--ink);
+  }
+  h2 {
+    margin-top: 0;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    border-bottom: 1px dashed var(--cobalt-border);
+    padding-bottom: 0.4rem;
+  }
+  .badge {
+    background: var(--cobalt-border);
+    color: white;
+    padding: 0.1rem 0.4rem;
+    font-size: 0.75rem;
+  }
+  .optic {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--optic-green);
+    box-shadow: 0 0 8px var(--optic-green);
+    margin-right: 6px;
+  }
+  .meta {
+    font-size: 0.78rem;
+    color: #0b4a9e;
+  }
+  pre {
+    background: #101419;
+    color: #d8e6ff;
+    padding: 1rem;
+    overflow-x: auto;
+    font-size: 0.8rem;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div>
+      <span class="zine-tag">SPACE FORT PBC // ISSUE 01</span>
+      <h1 style="margin:0.4rem 0 0 0;">ANIMAL SCRYPT &times; MADKEN</h1>
+      <small>SYNTHETIC DEMO VIEW — PORTABLE IDENTITY &amp; PARALLEL PRESENCE</small>
+    </div>
+    <div>
+      <span class="optic"></span><strong>UNIT: WAVE-08 (Cobalt Scout)</strong>
+    </div>
+  </header>
+
+  <div class="grid">
+    <section class="panel">
+      <h2>1. Madken Chassis &amp; Authored Lore</h2>
+      <p><strong>ID:</strong> <code>mk-08-wave</code></p>
+      <p><strong>Shell Spec:</strong> Translucent Cobalt-08 / Articulated MK1</p>
+      <p><strong>Immutable Lore:</strong> Compact articulated field archivist with translucent cobalt plates and amber-green optics.</p>
+    </section>
+
+    <section class="panel">
+      <h2>2. Shared Ritual Object (CRYSTALLIZED)</h2>
+      <p><strong>Artifact:</strong> Translucent Signal Core #01</p>
+      <p><strong>Vitality Points:</strong> 2 (Zero-Shame Dormancy Enabled)</p>
+      <ul><li><code>2026-11-08T19:29:15+00:00</code> — <strong>RESONATING</strong> (Vitality: 1): Completed 15-minute silent parallel build block.</li><li><code>2026-11-08T19:29:15+00:00</code> — <strong>CRYSTALLIZED</strong> (Vitality: 2): Logged mutual evening observation; core crystallized to Stage 2.</li></ul>
+    </section>
+
+    <section class="panel">
+      <h2>3. User-Approved Private Memories</h2>
+      <ul><li><span class='badge'>PROJECT</span> Prototyping low-pressure co-working habitats and OpenSCAD shell joints. <span class='meta'>[STATUS: APPROVED]</span></li></ul>
+    </section>
+
+    <section class="panel">
+      <h2>4. Bilateral Fragment Exchanges</h2>
+      <ul><li><strong>mk-08-wave &harr; mk-12-orbit</strong>: “Both humans are building hardware-software prototypes late at night this week.” <span class='meta'>[BILATERAL SIGN-OFF VERIFIED]</span></li></ul>
+    </section>
+  </div>
+
+  <section class="panel" style="margin-top: 1.25rem;">
+    <h2>5. Simulated Creator-to-Owner Royalty Ledger (20% Parent Rule)</h2>
+    <ul><li><code>roy-dd0b8413</code> — Parent <strong>mk-08-wave</strong> &rarr; Child <strong>mk-12-orbit</strong> | Gross: $15.00 | Creator Royalty (20%): <strong>$3.00</strong> <span class='meta'>[SIMULATED_TEST_LEDGER]</span></li></ul>
+  </section>
+
+  <section class="panel" style="margin-top: 1.25rem;">
+    <h2>6. Portable Identity Export (User-Owned JSON State)</h2>
+    <pre>{
+  "schema_version": "spacefort.orbit.portable_identity.v0.1",
+  "synthetic_demo_data": true,
+  "exported_at": "2026-11-08T19:29:15+00:00",
+  "companion_manifest": {
+    "id": "mk-08-wave",
+    "owner_id": "user_alpha",
+    "name": "WAVE-08 (Cobalt Scout)",
+    "chassis_spec_json": "{\"proportion_class\": \"compact-articulated-mk1\", \"translucent_tint\": \"cobalt-blue-08\", \"optic_accent\": \" phosphor-amber-green\", \"visible_joints\": true, \"progression_stage\": 1}",
+    "authored_lore": "Compact articulated field archivist with translucent cobalt plates and amber-green optics.",
+    "voice_constraints_json": "{\"aesthetic\": \"editorial-zine\", \"max_sentences\": 3, \"clinical_claims_allowed\": false}",
+    "created_at": "2026-11-08T19:29:15+00:00",
+    "chassis_spec": {
+      "proportion_class": "compact-articulated-mk1",
+      "translucent_tint": "cobalt-blue-08",
+      "optic_accent": " phosphor-amber-green",
+      "visible_joints": true,
+      "progression_stage": 1
+    },
+    "voice_constraints": {
+      "aesthetic": "editorial-zine",
+      "max_sentences": 3,
+      "clinical_claims_allowed": false
+    }
+  },
+  "approved_private_memories": [
+    {
+      "id": "mem-d6a0b5bb",
+      "companion_id": "mk-08-wave",
+      "category": "project",
+      "content": "Prototyping low-pressure co-working habitats and OpenSCAD shell joints.",
+      "status": "APPROVED",
+      "visibility": "FRAGMENT_CANDIDATE",
+      "created_at": "2026-11-08T19:29:15+00:00",
+      "approved_at": "2026-11-08T19:29:15+00:00"
+    }
+  ],
+  "active_bilateral_exchanges": [
+    {
+      "id": "fx-9a0ad50b",
+      "memory_id": "mem-d6a0b5bb",
+      "sender_companion_id": "mk-08-wave",
+      "recipient_companion_id": "mk-12-orbit",
+      "shared_summary": "Both humans are building hardware-software prototypes late at night this week.",
+      "sender_approved": 1,
+      "recipient_approved": 1,
+      "created_at": "2026-11-08T19:29:15+00:00",
+      "approved_at": "2026-11-08T19:29:15+00:00",
+      "revoked_at": null
+    }
+  ],
+  "active_capability_leases": [
+    {
+      "id": "lease-4376f79e",
+      "granter_companion_id": "mk-08-wave",
+      "grantee_user_id": "user_beta",
+      "worker_role": "archivist",
+      "scope_description": "Temporary read/write access to shared ritual log only; zero access to private memories.",
+      "expires_at": "2026-11-08T20:29:15+00:00",
+      "revoked": 0
+    }
+  ],
+  "royalty_ledger": [
+    {
+      "id": "roy-dd0b8413",
+      "parent_companion_id": "mk-08-wave",
+      "child_companion_id": "mk-12-orbit",
+      "creator_id": "user_alpha",
+      "buyer_id": "user_beta",
+      "gross_amount_cents": 1500,
+      "creator_royalty_cents": 300,
+      "platform_fee_cents": 150,
+      "net_settlement_cents": 1050,
+      "settlement_mode": "SIMULATED_TEST_LEDGER",
+      "created_at": "2026-11-08T19:29:15+00:00"
+    }
+  ]
+}</pre>
+  </section>
+</body>
+</html>
