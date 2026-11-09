@@ -22,6 +22,7 @@ from typing import Dict, Tuple, Optional, Any
 from skeleton.workspace_server import WorkspaceApp
 from apps.dataroom.server import DataRoomApp
 from apps.vc_directory.server import VCDirectoryApp
+from apps.studio.blueprint_studio import StudioBlueprintApp
 
 REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent
 SEED_DIR = REPO_ROOT / "seed"
@@ -30,33 +31,37 @@ ZINE_HTML_PATH = REPO_ROOT / "skeleton" / "zine_demo_view.html"
 TMP_DIR = pathlib.Path(tempfile.gettempdir())
 WORKSPACE_DB = str(TMP_DIR / "animal_scrypt_vercel_workspace.db")
 DATAROOM_DB = str(TMP_DIR / "animal_scrypt_vercel_dataroom.db")
+STUDIO_DB = str(TMP_DIR / "animal_scrypt_vercel_studio.db")
 
 _workspace_app: Optional[WorkspaceApp] = None
 _dataroom_app: Optional[DataRoomApp] = None
 _directory_app: Optional[VCDirectoryApp] = None
+_studio_app: Optional[StudioBlueprintApp] = None
 
 
-def get_apps() -> Tuple[WorkspaceApp, DataRoomApp, VCDirectoryApp]:
-    global _workspace_app, _dataroom_app, _directory_app
+def get_apps() -> Tuple[WorkspaceApp, DataRoomApp, VCDirectoryApp, StudioBlueprintApp]:
+    global _workspace_app, _dataroom_app, _directory_app, _studio_app
     if _workspace_app is None:
         _workspace_app = WorkspaceApp(db_path=WORKSPACE_DB)
     if _dataroom_app is None:
         _dataroom_app = DataRoomApp(db_path=DATAROOM_DB)
     if _directory_app is None:
         _directory_app = VCDirectoryApp()
-    return _workspace_app, _dataroom_app, _directory_app
+    if _studio_app is None:
+        _studio_app = StudioBlueprintApp(db_path=STUDIO_DB)
+    return _workspace_app, _dataroom_app, _directory_app, _studio_app
 
 
 GLOBAL_NAV_BAR = """
 <div style="background:#141413;color:#EFE6D4;padding:0.65rem 1.25rem;font-family:'Courier New',monospace;font-size:0.82rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0.5rem;border-bottom:2px solid #D8FF3E;">
   <div><strong>ROBOTIC DISCIPLINE</strong> // ANIMAL SCRYPT &times; DISCIPLE &times; MADKEN</div>
   <div style="display:flex;flex-wrap:wrap;gap:0.85rem;">
-    <a href="/" style="color:#D8FF3E;text-decoration:none;font-weight:bold;">[1. Portfolio]</a>
+    <a href="/studio" style="color:#141413;background:#D8FF3E;padding:0.15rem 0.5rem;text-decoration:none;font-weight:bold;">[★ Visual Studio, Blueprint &amp; White Paper]</a>
+    <a href="/" style="color:#EFE6D4;text-decoration:none;">[1. Portfolio]</a>
     <a href="/workspace" style="color:#EFE6D4;text-decoration:none;">[2. Creature Workspace]</a>
     <a href="/dataroom" style="color:#EFE6D4;text-decoration:none;">[3. Investor Data Room]</a>
     <a href="/directory" style="color:#EFE6D4;text-decoration:none;">[4. VC Tools Directory]</a>
     <a href="/zine" style="color:#EFE6D4;text-decoration:none;">[5. Zine Terminal]</a>
-    <a href="/seed" style="color:#EFE6D4;text-decoration:none;">[6. /seed Docs (00-29)]</a>
   </div>
 </div>
 """
@@ -116,10 +121,17 @@ def render_seed_viewer(selected_file: str = "00-context.md") -> str:
 def route_request(
     method: str, path: str, body: Optional[str] = None, ip_address: str = "127.0.0.1"
 ) -> Tuple[int, Dict[str, str], str]:
-    workspace_app, dataroom_app, directory_app = get_apps()
+    workspace_app, dataroom_app, directory_app, studio_app = get_apps()
     parsed = urllib.parse.urlparse(path)
     clean_path = parsed.path
     query = urllib.parse.parse_qs(parsed.query)
+
+    # 0. Visual Design Studio, Blueprint & White Paper Reader/Editor routes
+    if clean_path in ("/studio", "/blueprint", "/seed") or clean_path.startswith("/api/studio/"):
+        status, headers, resp_body = studio_app.handle_request(method, path, body)
+        if "text/html" in headers.get("Content-Type", ""):
+            resp_body = inject_nav(resp_body)
+        return status, headers, resp_body
 
     # 1. Portfolio & Creature Workspace routes
     if clean_path in ("/", "/workspace") or clean_path.startswith("/api/memory/") or clean_path.startswith("/api/royalty/") or clean_path in ("/api/state", "/api/export"):

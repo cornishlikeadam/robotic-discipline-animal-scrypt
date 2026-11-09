@@ -267,7 +267,8 @@ class WorkspaceApp:
       <h1>Hold the animal. Keep the memory.</h1>
       <p>A 3D-printed studio creature with a recessed NFC tag and an explicit memory ledger you approve, edit, and export.</p>
       <div>
-        <a class="btn btn-lime" href="/workspace">Meet an animal</a>
+        <a class="btn btn-lime" href="/studio">Open Visual Blueprint &amp; White Paper Studio</a>
+        <a class="btn" href="/workspace">Meet an animal</a>
         <a class="btn" href="#studio-note">Read the studio note</a>
       </div>
     </div>
