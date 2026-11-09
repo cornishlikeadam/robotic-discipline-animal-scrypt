@@ -1,10 +1,71 @@
-# ROBOTIC DISCIPLINE
+# ROBOTIC DISCIPLINE — Animal Scrypt × Disciple × Madken
 
-**Founder:** Kendren "KJ" Cornish  
-**Company Identity:** Robotic Discipline  
-**Historical & Evolving Concept Names:** MADKEN (also *Mad Kin* / *MAD KIN*), Animal Scrypt, Disciple, Space Fort  
-**Status:** Unified company concept — Phase 0 (Unification & Concept Audit complete; Phase 1 Customer Discovery & SCAD Accelerator preparation active)  
-**Last Updated:** November 8, 2026
+**Founder:** Kendren "KJ" Cornish (SCAD, Savannah, GA)  
+**Legal Entity Name:** Robotic Discipline  
+**Product Name:** Animal Scrypt  
+**Practice / Studio Name:** Disciple  
+**Related Mark:** Madken  
+
+---
+
+## Live Deployed Applications (Vercel)
+
+* **[1. Portfolio Front Page (Section 19)](https://robotic-discipline-animal-scrypt.vercel.app/)** — `https://robotic-discipline-animal-scrypt.vercel.app/`
+* **[2. Interactive Creature Workspace & 20% Royalty Simulator (Build 1)](https://robotic-discipline-animal-scrypt.vercel.app/workspace)** — `https://robotic-discipline-animal-scrypt.vercel.app/workspace`
+* **[3. Self-Hosted Investor Data Room — Stage 1 & Stage 2 NDA Gate (Build 2)](https://robotic-discipline-animal-scrypt.vercel.app/dataroom)** — `https://robotic-discipline-animal-scrypt.vercel.app/dataroom`
+* **[4. Open-Source VC & Startup Tools Directory — 15 Seeded Repos (Build 3)](https://robotic-discipline-animal-scrypt.vercel.app/directory)** — `https://robotic-discipline-animal-scrypt.vercel.app/directory`
+* **[5. Stage-1 Zine Terminal View (`WAVE-08`)](https://robotic-discipline-animal-scrypt.vercel.app/zine)** — `https://robotic-discipline-animal-scrypt.vercel.app/zine`
+* **[6. Interactive `/seed/` Operating Repository Viewer (`00`–`29`)](https://robotic-discipline-animal-scrypt.vercel.app/seed)** — `https://robotic-discipline-animal-scrypt.vercel.app/seed`
+
+---
+
+## `/seed/` Startup Operating Repository (`00`–`29`)
+
+* [`seed/00-context.md`](./seed/00-context.md) — Locked venture context, customer focus, and 7-point MVP done-condition.
+* [`seed/nda-status.md`](./seed/nda-status.md) — Stage 2 NDA gate status (`nda: none`).
+* [`seed/sources.md`](./seed/sources.md) — Append-only public URL citation ledger.
+* [`seed/01-board.md`](./seed/01-board.md) — 3-seat Virtual Board review (`Offer`, `Monopoly`, `Product`).
+* [`seed/02-competitors.md`](./seed/02-competitors.md) — Competitor breakdown & two-sentence wedge.
+* [`seed/03-customers-100.md`](./seed/03-customers-100.md) — 100 simulated buyers across 4 reachable groups + 5 Mom Test questions.
+* [`seed/04-offer.md`](./seed/04-offer.md) — V1 Offer specification and explicit refusals.
+* [`seed/05-pricing.md`](./seed/05-pricing.md) — 4-Tier Price Growth Ladder (`$45 + $9/mo` $\to$ `$129–$199` $\to$ `$249` $\to$ `$2,500` cohort) & 20% single-hop parent royalty.
+* [`seed/06-cfo.md`](./seed/06-cfo.md) — Unit cost breakdown (`$10.61` assumption), margin traps, and bootstrap burn.
+* [`seed/07-canvas.md`](./seed/07-canvas.md) — 9-block Business Model Canvas.
+* [`seed/08-business-plan.md`](./seed/08-business-plan.md) — 10-section founder-voice Business Plan.
+* [`seed/09-market.md`](./seed/09-market.md) — Bottom-up SCAD & US collector customer count first, top-down SAM/TAM second.
+* [`seed/10-investor-match.md`](./seed/10-investor-match.md) — Accelerator targets, 10 matched pre-seed funds/angels, and "do not email" list.
+* [`seed/11-deck-investor.md`](./seed/11-deck-investor.md) — 10-slide laptop deck + 3 appendix slides.
+* [`seed/12-deck-stage.md`](./seed/12-deck-stage.md) — 10-slide live-room stage deck (40pt+ type).
+* [`seed/13-talk-track.md`](./seed/13-talk-track.md) — Spoken lines, Q&A, and 5s / 30s / 2m / 5m pitches.
+* [`seed/14-follow-up.md`](./seed/14-follow-up.md) — Same-day follow-up email, 2-bump sequence, and tracking table.
+* [`seed/15-applications.md`](./seed/15-applications.md) — All 11 accelerator application answers (YC, Techstars, a16z Speedrun, SCAD).
+* [`seed/16-videos.md`](./seed/16-videos.md) — 60s Founder Video script and 60–90s Demo Video shot list.
+* [`seed/17-outreach.md`](./seed/17-outreach.md) — 5 cold/warm emails under 120 words + 2-bump sequence.
+* [`seed/18-call-coach.md`](./seed/18-call-coach.md) — 25-minute investor call agenda, 8 hard questions, and post-call scorecard.
+* [`seed/19-term-sheet.md`](./seed/19-term-sheet.md) — Plain-English SAFE/note reading guide (`NOT LEGAL ADVICE`).
+* [`seed/20-dataroom-checklist.md`](./seed/20-dataroom-checklist.md) — Stage 1 vs. Stage 2 rooms and exists-vs-missing inventory.
+* [`seed/21-investor-update.md`](./seed/21-investor-update.md) — Monthly investor update template with mandatory lowlights.
+* [`seed/22-legal-menu.md`](./seed/22-legal-menu.md) — Entity comparison (`NOT LEGAL ADVICE`) + 5 IP questions for counsel.
+* [`seed/23-dataroom-product-spec.md`](./seed/23-dataroom-product-spec.md) — Self-hosted data room product spec (implemented in [`apps/dataroom/server.py`](./apps/dataroom/server.py)).
+* [`seed/24-vc-directory-spec.md`](./seed/24-vc-directory-spec.md) — VC tools directory product spec (implemented in [`apps/vc_directory/server.py`](./apps/vc_directory/server.py)).
+* [`seed/25-factory.md`](./seed/25-factory.md) — `gstack`-style software factory + TDD rules.
+* [`seed/26-book-router.md`](./seed/26-book-router.md) — Diagnostic router + all 15 startup books.
+* [`seed/27-yc-advisor.md`](./seed/27-yc-advisor.md) — Attributed YC Startup School advisor spine.
+* [`seed/28-case-study.md`](./seed/28-case-study.md) — Honest Build Case 01 (`2026-11-08`).
+* [`seed/29-white-paper.md`](./seed/29-white-paper.md) — Methods white paper: *Identity, Embodiment, and Royalties for a Persistent Artificial Animal*.
+
+---
+
+## Installed Skills & Applications
+
+* [`skills/yc-startup-advisor/SKILL.md`](./skills/yc-startup-advisor/SKILL.md) — YC Startup School advisor skill.
+* [`skills/book-router/SKILL.md`](./skills/book-router/SKILL.md) — 15-book diagnostic router skill.
+* [`skills/software-factory/SKILL.md`](./skills/software-factory/SKILL.md) — `gstack`-style software factory & TDD skill.
+* [`skeleton/interfaces.py`](./skeleton/interfaces.py) & [`skeleton/workspace_server.py`](./skeleton/workspace_server.py) — Stage-1 SQLite kernel, 20% royalty ledger, and Portfolio/Workspace server.
+* [`apps/dataroom/server.py`](./apps/dataroom/server.py) — Self-Hosted Investor Data Room server.
+* [`apps/vc_directory/server.py`](./apps/vc_directory/server.py) & [`content/tools/tools-directory.md`](./content/tools/tools-directory.md) — Open-Source VC & Startup Tools Directory.
+* [`api/index.py`](./api/index.py) — Unified Vercel serverless gateway.
+* [`tests/`](./tests/) — 14 automated unit tests (`python3 -m unittest discover -s tests -v`).
 
 ---
 
